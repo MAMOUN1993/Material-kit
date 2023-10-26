@@ -1,0 +1,354 @@
+.col-main{
+    margin-top: 150px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .col-header{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 7px;
+        margin-bottom: 50px;
+        h5{
+            background-color: #aecef7;
+            color: #1663ca;
+            padding: 5px 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        h1{
+            font-size: 38px;
+            color: #344767;
+        }   
+        p{
+            width: 70%;
+            text-align: center;
+            color: #7b809a;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+    }
+    .coll-compo-main{
+        margin-bottom: 75px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        padding-left: 10px;
+        position: relative;
+        .fixed-hedaer{
+            position: sticky;
+            top: 10%;
+            z-index: 100;
+            width: 300px;
+            display: flex;
+            height: 100px;
+            flex-direction: column;
+            gap: 10px;
+            h1{
+                color: #344767;
+            }
+            p{
+                color: #80859e;
+                line-height: 1.5;
+            }
+        }
+        .coll-image{
+            width: 972px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px 21px;
+            >div{   
+                cursor: pointer; 
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                transform-style: preserve-3d;
+                perspective: 1000px;
+                .image{
+                    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.625rem 0.9375rem -0.1875rem,
+                                rgba(0, 0, 0, 0.05) 0rem 0.25rem 0.375rem -0.125rem;
+                    width: 300px;
+                    height: 161px;
+                    padding-bottom: 15px;
+                    position: relative;
+                    transition-duration: 300ms;
+                    transform-origin: top;
+                    border-radius: 10px;
+                    .lock{
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 25px;
+                        height: 25px;
+                        font-size: 12px;
+                        background-color: black;
+                        color: white;
+                        border-radius: 50%;
+                        top: 10px;
+                        right: 10px;
+                        z-index: 2;
+                    }
+                    .lock::after{
+                        position: absolute;
+                        top: -240%;
+                        right: 350%;
+                        width: 100px;
+                        height: 25px;
+                        content: "Pro Element";
+                        background-color: black;
+                        color: white;
+                        border-radius: 5px;
+                        text-align: center;
+                        padding-top: 10px;
+                        font-size: 14px;
+                        opacity: 0;
+                        transition-duration: 200ms;
+                    }
+                    
+                    .lock::before{
+                        content: "";
+                        position: absolute;
+                        width: 0px;
+                        height: 0px;
+                        top: -110%;
+                        right: 500%;
+                        border-top: 10px solid black;
+                        border-bottom: 10px solid transparent;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        transition-duration: 200ms;
+                        opacity: 0;
+                    }
+                    .imag{
+                        width: 100%;
+                        height: 145px;
+                        border-radius: 10px;
+                    }
+                }
+                .image:hover .lock::after {
+                    opacity: 1;
+                }
+                .image:hover  .lock::before{
+                    opacity: 1;
+                    top: -100%;
+                }
+                .image:hover{
+                    transform: rotatex(10deg);
+                    margin: -3px 0px 3px;
+                    
+                }
+                .image[attir="true"]::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 90%;
+                    background-color: rgba(255, 255, 255, 0.37);
+                    top: 0%;
+                    left: 0%;
+                    border-radius: 5px;
+                    z-index: 1;
+                }
+                .para-img{
+                    padding-left: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    h4{
+                        text-transform: capitalize;
+                        color: #435572;
+                    }
+                    p{
+                        text-transform: capitalize;
+                        color: #8d91a7;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .coll-compo-main{
+        .fixed-hedaer{
+            position: relative !important;
+            width: 100% !important;
+            h1{
+                font-size: 30px;
+            }
+            p{
+                width: 100% !important;
+            }
+        }
+        width: 80vw;
+        flex-direction: column;
+        padding-left: unset !important;
+        margin-left: 16px;
+        .coll-image{
+            width: 100% !important;
+            gap: 30px 24px !important;
+            >div{
+                width: 100% !important;
+                .image{
+                    width: 100%!important;
+                    height: 241px !important;
+                    .lock::after{
+                        right: 27vw !important;
+                    }
+                    .lock::before{
+                        right: 35vw !important;
+                    }
+                    .imag{
+                        height: 90% !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .coll-compo-main{
+        .fixed-hedaer{
+            position: relative !important;
+            width: 100% !important;
+            h1{
+                font-size: 30px;
+            }
+            p{
+                width: 100% !important;
+            }
+        }
+        width: 492px ;
+        flex-direction: column;
+        padding-left: unset !important;
+        margin-left: 16px;
+        .coll-image{
+            width: 100% !important;
+            gap: 30px 24px !important;
+            >div{
+                width: 100% !important;
+                .image{
+                    width: 100%!important;
+                    height: 241px !important;
+                    .lock::after{
+                        right: 735% !important;
+                    }
+                    .lock::before{
+                        right: 900% !important;
+                    }
+                    .imag{
+                        height: 232px !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:768px) and (max-width:992px) {
+    .coll-compo-main{
+        .fixed-hedaer{
+            position: relative !important;
+            h1{
+                font-size: 30px;
+            }
+        }
+        width: 672px ;
+        flex-direction: column;
+        padding-left: unset !important;
+        margin-left: 16px;
+        .coll-image{
+            width: 100% !important;
+            gap: 30px 24px !important;
+            >div{
+                width: 208px !important;
+                .image{
+                    width: 100%!important;
+                    height: 160px !important;
+                    .lock::after{
+                        right: 200% !important;
+                    }
+                    .lock::before{
+                        right: 350% !important;
+                    }
+                    .imag{
+                        height: 100px !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:993px) and (max-width:1200px) {
+    .coll-compo-main{
+        .fixed-hedaer{
+            h1{
+                font-size: 30px;
+            }
+        }
+        width: 912px;
+        margin-right: -9px;
+        margin-left: 9px;
+        .coll-image{
+            gap: 30px 14px !important;
+            >div{
+                width: 210px !important;
+                .image{
+                    width: 100%!important;
+                    height: 160px !important;
+                    .lock::after{
+                        right: 200% !important;
+                    }
+                    .lock::before{
+                        right: 350% !important;
+                    }
+                    .imag{
+                        height: 100px !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1201px) and (max-width:1400px) {
+    .coll-compo-main{
+        width: 1092px;
+        margin-right: -9px;
+        margin-left: 9px;
+        .coll-image{
+            gap: 30px 17px !important;
+            >div{
+                width: 254px !important;
+                .image{
+                    width: 254px !important;
+                    height: 160px !important;
+                    .lock::after{
+                        right: 280% !important;
+                    }
+                    .lock::before{
+                        right: 433% !important;
+                    }
+                    .imag{
+                        height: 120px !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width:1401px) {
+    .coll-compo-main{
+        width: 1285px;
+        margin-left: 8px;
+    }
+}

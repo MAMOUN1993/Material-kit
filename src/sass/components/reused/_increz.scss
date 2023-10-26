@@ -1,0 +1,118 @@
+.reviews{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        h2{
+            color: #3089ec;
+            font-size: 46px;
+        }
+        p{
+            text-align: center;
+            color: #9297ac;
+        }
+        h4{
+            font-size: 20px;
+            color: #344767;
+        }
+    }
+    >div:not(:last-child){
+        border-right: 1px solid #f1f3f6;
+    }
+}
+
+
+@media (max-width:575px) {
+    .reviews{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        >div{
+            width: 90%;
+            height: 169px;
+            p{
+                width: 85%;
+                height: 52px;
+            }
+        }
+        >div:not(:last-child){
+            border-right: unset;
+        }
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .reviews{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        >div{
+            width: 492px;
+            height: 169px;
+            p{
+                width: 460px;
+                height: 52px;
+            }
+        }
+        >div:not(:last-child){
+            border-right: unset;
+        }
+    }
+}
+@media (min-width:768px) and (max-width:992px) {
+    .reviews{
+        margin-top: 50px;
+        >div{
+            width: 224px;
+            height: 220px;
+            p{
+                width: 192px;
+                height: 76px;
+            }
+        }
+    }
+}
+@media (min-width:993px) and (max-width:1200px) {
+    .reviews{
+        margin-top: 50px;
+        >div{
+            width: 228px;
+            height: 220px;
+            p{
+                width: 196px;
+                height: 76px;
+            }
+        }
+    }
+}
+@media (min-width:1201px) and (max-width:1400px) {
+    .reviews{
+        margin-top: 50px;
+        >div{
+            width: 272px;
+            height: 220px;
+            p{
+                width: 240px;
+                height: 76px;
+            }
+        }
+    }
+}
+@media (min-width:1401px) {
+    .reviews{
+        margin-top: 50px;
+        >div{
+            width: 317px;
+            height: 194px;
+            p{
+                width: 285px;
+                height: 51px;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.landing-about{
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img{
+        position: absolute;
+        min-width: 100%;
+        min-height: 75vh;
+        z-index: -1;
+    }
+    .landing-info{
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        gap: 15px;
+        h1{
+            font-size: 50px;
+            text-align: center;
+        }
+        >p{
+            font-size: 20px;
+            width: 80%;
+            text-align: center;
+            line-height: 1.5;
+        }
+        button{
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: none;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .find{
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            p{
+                text-transform: capitalize;
+                text-align: center;
+                font-weight: 600;
+            }
+            .find-icone{
+                display: flex;
+                gap: 20px;
+                i{
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+} .landing-about::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 66, 74, 0.6);
+    z-index: 1;
+}
+@media (max-width:575px) {
+    .landing-about{
+        .landing-info{
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .landing-about{
+        .landing-info{
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+}

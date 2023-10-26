@@ -1,0 +1,206 @@
+.sign-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url("https://demos.creative-tim.com/material-kit-react/static/media/bg-sign-in-basic.f327db1d.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    >div:first-of-type{
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:475px;
+        position: relative;
+        gap: 20px;
+        background-color: white;
+        border-radius: 10px;
+        padding-top: 150px;
+        >div:first-of-type{
+            position: absolute;
+            width: 95%;
+            background-color: #237ce9;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;  
+            color: white;
+            left: 50%;
+            top: -5%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            gap: 30px;
+            padding: 30px 30px;
+            h2{
+                font-size: 28px;
+                text-transform: capitalize;
+            }
+            >div{
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                
+                i{
+                    font-size: 18px;
+                }
+            }
+            
+        }
+        >.input{
+            position: relative;
+            width: 90%;
+            p{
+                position: absolute;
+                opacity: 0.5;
+                text-transform: capitalize;
+                top: 10px;
+                left: 20px;
+                background-color: white;
+                transition-duration: 200ms;
+                padding: 5px;
+            }
+            p[att="true"]{
+                color: #237ce9;
+                top: -12px;
+                opacity: 1;
+                font-size: 12px;
+            }
+            .input-space{
+                border: 2px solid rgba(0, 0, 0, 0.199);
+                outline: none;
+                width: 100%;
+                border-radius: 5px;
+                padding: 10px 20px;
+                font-size: 20px;
+            }
+            
+            .input-space[att="true"]{
+                border-color:#237ce9 !important;
+            }
+        }
+        .remember{
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row-reverse;
+            width: 90%;
+            gap: 10px;
+            align-items: center;
+            cursor: pointer;
+            p{
+                text-transform: capitalize;
+            }
+            .remember-button{
+                width: 35px;
+                height: 16px;
+                background-color: rgba(0, 0, 0, 0.199);
+                border-radius: 10px;
+                position: relative;
+                transition-duration: 200ms;
+            }
+            .remember-button::after{
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                top: -2px;
+                background-color: white;
+                border: 1px solid  rgba(0, 0, 0, 0.199);
+                transition-duration: 200ms;
+                left: 0px;
+            }
+            .remember-button[attrs="true"]{
+                background-color: rgba(0, 0, 0, 0.466);
+            }
+            .remember-button[attrs="true"]::after{
+                left: 16px;
+                
+            }
+        }
+        button{
+            margin-top: 20px;
+            width: 90%;
+            background-color: #237ce9;
+            color: white;
+            border: unset;
+            outline: unset;
+            padding: 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        >p{
+            width: 90%;
+            padding: 20px 0px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.637);
+            span{
+                color: #237ce9;
+            }
+        }
+    }
+    >div:last-of-type{
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0px;
+        color: white;
+        z-index: 2;
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 20px;
+        }
+    }
+}
+.sign-container::after{
+    content: "";
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 25, 25, 0.6);
+    position: absolute;
+}
+@media (max-width:575px) {
+    .sign-container{
+        >div:first-of-type{
+            width: 425px !important;
+        }
+        >div:last-of-type{
+        
+            flex-direction:column !important;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .sign-container{
+        >div:last-of-type{
+            flex-direction:column !important;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}
+@media (min-width:768px) and (max-width:992px) {
+    .sign-container{
+        >div:last-of-type{
+            flex-direction:column !important;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}

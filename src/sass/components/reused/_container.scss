@@ -1,0 +1,43 @@
+@use "../reused/increz" ;
+@use "./home/revers" ;
+@use "./home/collection";
+@use "./home/coded" ;
+@use "./home/complex" ;
+@use "./home/trust" ;
+@use "./home/awesome" ;
+@use "./home/supp" ;
+@media (max-width: 768px) {
+    .container {
+        width: 92vw;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 97vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 97vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 97vw;
+    }
+}
+.container{
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

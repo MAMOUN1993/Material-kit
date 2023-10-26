@@ -1,0 +1,40 @@
+@use "./navTow";
+@use "./nav";
+@use "../home/collection";
+
+@media (max-width:575px) {
+    .header{
+        width: 88vw;
+        left: 5vw;
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .header{
+        width: 492px ;
+        left:calc((100vw - 492px) / 2);
+    }
+}
+@media (min-width:768px) and (max-width:992px) {
+    .header{
+        width: 672px ;
+        left: calc((100vw - 672px) / 2) ;
+    }
+}
+@media (min-width:993px) and (max-width:1200px) {
+    .header{
+        width: 912px;
+        left: calc((100vw - 912px) / 2) ;
+    }
+}
+@media (min-width:1201px) and (max-width:1400px) {
+    .header{
+        width: 1092px;
+        left: calc((100vw - 1092px) / 2) ;
+    }
+}
+@media (min-width:1401px) {
+    .header{
+        width: 1274px;
+        left: calc((100vw - 1274px) / 2 );
+    }
+}

@@ -1,0 +1,166 @@
+.blogs-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 40px;
+    margin: 50px 0px;
+    .blogs-header{
+        h2{
+            font-size: 30px;
+        }
+    }
+    .blogs-check{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        >div:not(:last-of-type){
+            width: 24%;
+            display: flex;
+            align-self: flex-start;
+            flex-direction: column;
+            gap: 20px;
+            >div:first-of-type{
+                width: 100%;
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+            .blogs-disc{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                p{
+                    opacity: 0.5;
+                }
+            }
+            >div:last-of-type{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: #237ce9;
+                cursor: pointer;
+                gap: 5px;
+                text-transform: capitalize;
+                transition-duration: 200ms;
+                font-weight: 700;
+            }
+            >div:last-of-type:hover{
+                gap: 10px;
+            }
+        }
+        >div:last-of-type::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.61);
+            position: absolute;
+            border-radius: 10px;
+        }
+        >div:last-of-type{
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            gap: 25px;
+            text-align: center;
+            padding: 40px 20px;
+            min-height: 365px;
+            >div:first-of-type{
+                position: absolute;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                z-index: -2;
+                top: 0%;
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                    height: 100%;
+                }
+            }
+            .blogs-disc{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                color: white;
+                gap: 20px;
+                p{
+                    text-align: left;
+                }
+                h3{
+                    font-size: 36px;
+                    text-align: left;
+                }
+            }
+            >div:last-of-type{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+                cursor: pointer;
+                gap: 5px;
+                text-transform: capitalize;
+                transition-duration: 200ms;
+                
+            }
+            >div:last-of-type:hover{
+                gap: 10px;
+            }
+        }
+    }
+}
+@media (max-width:575px) {
+    .blogs-container{
+        width: 80vw;
+        .blogs-check{
+            flex-wrap: wrap !important;
+            >div{
+                width: 100% !important;
+            }
+        }
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .blogs-container{
+        width: 500px;
+        .blogs-check{
+            flex-wrap: wrap !important;
+            >div{
+                width: 45% !important;
+            }
+        }
+    }
+}
+@media (min-width:768px) and (max-width:992px) {
+    .blogs-container{
+        width: 700px;
+        .blogs-check{
+            flex-wrap: wrap !important;
+            >div{
+                width: 45% !important;
+            }
+        }
+    }
+}
+@media (min-width:993px) and (max-width:1200px) {
+    .blogs-container{
+        width: 880px;
+    }
+}
+@media (min-width:1201px) and (max-width:1400px) {
+    .blogs-container{
+        width: 1100px;
+    }
+}
+@media (min-width:1401px) {
+    .blogs-container{
+        width: 1250px;
+    }
+}

@@ -1,0 +1,120 @@
+.evelotion-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 150px 0px 50px;
+    .evelotion-img{
+        img{
+            width: 530px;
+        }
+    }
+    .eveoltion-para{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        gap: 5px;
+        >h3{
+            font-size: 26px;
+        }
+        >p{
+           line-height: 1.5; 
+           opacity: 0.6;
+        }
+        .evelotion-email{
+            display: flex;
+            gap: 10px;
+            width: 90%;
+            margin-top: 20px;
+            position: relative;
+            input[type="email"]{
+                padding: 15px 20px;
+                border-radius: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.699);
+                width: 80%;
+                z-index: 1;
+                background-color: transparent;
+                border: 1px solid rgba(0, 0, 0, 0.295);
+            }
+            input[type="email"]:focus{
+                outline: unset;
+                border: 2px solid #2983eb;
+            }
+            p{
+                position: absolute;
+                top: 12px;
+                left: 20px;
+                transition-duration: 300ms;
+                background-color: white;
+                z-index: -1;
+                opacity: 0.7;
+                padding: 0px 5px;
+                
+            }
+            p[valuew="true"]{
+                top: -8px;
+                font-size: 14px;
+                z-index: 1;
+                opacity: 1;
+                color: #2983eb;
+            }
+            
+        }
+        button{
+            background-color: #2983eb;
+            border: unset;
+            border-radius: 10px;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .evelotion-main{
+        flex-direction: column;
+        gap: 60px;
+        .evelotion-img{
+            img{
+                width: 100% !important;
+            }
+        }
+        .eveoltion-para{
+            width: 100%;
+        }
+        
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .evelotion-main{
+        flex-direction: column;
+        gap: 60px;
+        .evelotion-img{
+            img{
+                width: 500px !important;
+            }
+        }
+        .eveoltion-para{
+            width: 100%;
+        }
+        
+    }
+}
+@media (min-width:768px) and (max-width:992px) {
+    .evelotion-main{
+        
+        .evelotion-img{
+            img{
+                width: 300px !important;
+            }
+        }
+        .eveoltion-para{
+            width: 70%;
+        }
+        
+    }
+}

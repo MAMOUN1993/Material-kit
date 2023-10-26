@@ -1,0 +1,103 @@
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto 50px;
+    >div:first-of-type{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 30px;
+        
+        ul{
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            opacity: 0.5;
+            font-size: 14px;
+        }
+        >p{
+            opacity: 0.5;
+            font-size: 14px;
+        }
+    }
+    >div:last-of-type{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        h3{
+            width: 85%;
+            text-align: right;
+            line-height: 1.5;
+            opacity: 0.6;
+            font-size: 18px;
+        }
+        >ul{
+            display: flex;
+            gap: 22px;
+            opacity: 0.6;
+        }
+    }
+}
+@media (max-width:575px) {
+    .footer-container{
+        width: 80vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        div{
+            align-items: center !important;
+            gap: 20px;
+            h3{
+                text-align: center !important;
+            }
+        }
+    }
+}
+@media (min-width:576px) and (max-width:767px) {
+    .footer-container{
+        width: 550px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        div{
+            align-items: center !important;
+            gap: 20px;
+            h3{
+                text-align: center !important;
+            }
+        }
+    }
+}
+@media (min-width:768px) and (max-width:992px) {
+    .footer-container{
+        width: 700px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        div{
+            align-items: center !important;
+            gap: 20px;
+            h3{
+                text-align: center !important;
+            }
+        }
+    }
+}
+@media (min-width:993px) and (max-width:1200px) {
+    .footer-container{
+        width: 880px;
+    }
+}
+@media (min-width:1201px) and (max-width:1400px) {
+    
+    .footer-container{
+        width: 1100px;
+    }
+}
+@media (min-width:1401px) {
+    
+    .footer-container{
+        width: 1259px;
+    }
+}
